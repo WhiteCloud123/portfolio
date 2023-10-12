@@ -1,0 +1,43 @@
+@charset "utf-8";
+body,button,div{margin:0px; padding:0px;}
+body{background:#cbbdd1;}
+section{
+  display:flex; width:800px; background:#151515; margin:10px auto; 
+  border-radius:10px; position:relative; transition:all .4s;
+}
+button{
+  font-size:30px; width:100px; height:100px; margin:10px;
+  background:gray; border:none; cursor: pointer;
+}
+#wrap{background:#151515; border-radius:10px; z-index:2;}
+#output{
+  width:460px; height:100px; box-sizing:border-box; font-size:28px; 
+  line-height:98px; margin:20px auto 30px; overflow:auto;
+  padding-left:10px; box-sizing: border-box;
+  background:#595959; color:#fff;
+}
+#btns{display:flex; flex-flow:row wrap; width:480px; height:600px; margin:0px auto; }
+.record{position:absolute; left:480px; top:0px; z-index:1; transition:all .4s;}
+#result{
+  width:280px; height:600px; background:#595959; color:#fff;
+  font-size:20px; overflow-y:auto; padding-left:10px; margin:20px 0px 20px;
+}
+#reDel{
+  width:280px; height:100px; background:gray; cursor: pointer;
+  text-align:center; line-height:100px; font-size:24px;
+}
+#toggle{
+  width:30px; height:30px; position:absolute; right:0px; top:50%;
+  transform:translateY(-50%) rotate(180deg); margin:0px; 
+  background:url(image/arrow.png) no-repeat center center;
+  background-size:contain; filter:invert(100%);
+}
+#btns>.bot1{
+  background:rgb(152, 67, 67);
+}
+#btns>.bot2{
+  background:rgb(70, 86, 159);
+}
+.count{
+  background:darkgray;
+}

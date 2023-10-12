@@ -1,0 +1,137 @@
+@charset "utf-8";
+body,button,h1,h2,ul,li{margin:0px; padding:0px;}
+ul{list-style:none;}
+body{text-align:center;}
+button{cursor: pointer; border:none; border-radius:10px;}
+h2{font-size:24px; margin-bottom:20px; font-weight:bold;}
+#wrap {
+  display: flex; flex-wrap: wrap; flex-direction:row; overflow-y:hidden;
+  width:100%; height:100vh; margin:auto;
+}
+.top{width:70%; height:100vh;}
+#menu {
+  width:100%; height:100vh;  box-sizing: border-box;
+  overflow-y:auto; border-right:1px solid #151515;
+  background:ghostwhite;
+}
+#menu h2{margin:20px 0px;}
+#menu ul{
+  align-content:start;
+  display:flex; flex-wrap:wrap; justify-content:start; padding:0 20px;
+}
+#menu li {
+  height:200px; background:#FFF; cursor: pointer; border-radius:10px;
+  float:left; margin:10px; width:calc(25% - 20px);
+  box-sizing: border-box; padding-top:20px; border:1px solid #ccc;
+}
+#menu img{
+  width:80%; height:70%;
+  object-fit:contain;
+}
+#menu span {display:block;}
+
+#order {
+  width:30%; height:100vh; 
+  /* background-image:linear-gradient(aliceblue,cornflowerblue); */
+  background:aliceblue;
+  box-sizing: border-box; border-left:1px solid #151515;
+}
+#order h2{margin:20px auto;}
+#order_wrap{display:flex; flex-wrap:wrap;}
+#order_one{
+  width:90%; height:70vh; background:#fff; 
+  border-radius:10px; margin:0 auto; overflow-y:auto;
+}
+#order_one li{
+  display:flex; flex-direction:row; justify-content:space-around;
+  border-bottom:1px solid #ededed; align-items:center;
+}
+#order_one li .order_name{width:26%;}
+#order_one li .order_count{
+  width:26%; display:flex; justify-content:space-between; align-items:center;
+}
+#order_one li .order_count button{
+  width:30px; height:30px; border-radius:50%; font-size:20px;
+  box-sizing: border-box; border:1px solid #ccc; background:#fff;
+}
+#order_one li .order_price{width:26%;}
+#order_one li .del_btn{
+  width:20px; height:20px; border-radius:none;
+  background:url(img/x.png)no-repeat center center; background-size: contain;
+}
+
+#order_two{
+  width:43%; margin:20px 2% 0 5%; padding:0 4px; box-sizing: border-box;
+  background:#fff; border-radius:10px;
+}
+#order_two>div{display:flex; justify-content:space-between;}
+#order_two>div:nth-child(1){border-bottom:1px solid #ededed;}
+#order_two>div:nth-child(2){border-top:1px solid #ededed;}
+#order_two>div>p{font-weight:bold; font-size:20px;}
+#order_two>div>p:nth-child(1){color:#7d7d7d;}
+
+#order_three{
+  width:43%; margin:20px 5% 0 2%; border-radius:10px;
+  display:flex; flex-direction:column; justify-content: space-between;
+}
+#order_three button{
+  height:45%; font-size: 20px; font-weight:bold;
+}
+#order_three button:nth-child(1){background:rgb(48, 158, 48);}
+#order_three button:nth-child(2){background:rgb(199, 71, 71);}
+
+section{
+  width:100%; height:100vh; background:rgba(0,0,0,0.2);
+  position:absolute; left:0; top:0; z-index:9; display:none;
+}
+.bg{
+  position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
+  z-index:10; background:rgba(0,0,0,0.6); width:34vw; height:34vw;
+}
+.bg #close{
+  width:30px; height:30px; border-radius:none;
+  background:url(img/x.png)no-repeat center center; background-size: contain;
+  position:absolute; right:10px; top:10px; z-index: 20;
+}
+.bg #last_one{
+  width:100%; height:100%; position:absolute; left:0; top:0;
+  display:flex; justify-content: space-around; align-items:center;
+  z-index:7;
+}
+.bg #last_one button{
+  font-size:24px; display:inline-block; width:14vw; height:14vw;
+  border-radius:20px; background:blanchedalmond; font-weight:bold;
+}
+.bg #last_two{
+  width:100%; height:100%; position:absolute; left:0; top:0;
+  display:flex; justify-content: space-around; align-items:center;
+  z-index:6;
+}
+.bg #last_two button{
+  font-size:24px; display:inline-block; width:14vw; height:14vw;
+  border-radius:20px; font-weight:bold; background:#ededed;
+}
+.bg #last_three{
+  width:100%; height:100%; position:absolute; left:0; top:0;
+  background:#151515; color:#fff; display:none;
+}
+
+@media (max-width:1200px){
+  .top{width:60%;}
+  #order {
+    width:40%;
+  }
+  #menu li {
+    width:calc(100%/3 - 20px);
+  }
+}
+@media (max-width:1000px){
+  #menu li {
+    width:calc(100%/2 - 20px);
+  }
+}
+@media (max-width:700px){
+  #menu li {
+    width:calc(100% - 20px);
+  }
+}
